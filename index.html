@@ -92,3 +92,33 @@ function closePanel() {
 
 </body>
 </html>
+<button id="togglePanel" onclick="togglePanel()">
+  ENCENDER
+</button>
+
+<script>
+  let panelActivo = false;
+
+  function togglePanel() {
+    panelActivo = !panelActivo;
+
+    const boton = document.getElementById("togglePanel");
+
+    boton.textContent = panelActivo ? "APAGAR" : "ENCENDER";
+    boton.style.background = panelActivo ? "#c62828" : "#16834d";
+  }
+</script>
+
+<style>
+  #togglePanel {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: #16834d;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
